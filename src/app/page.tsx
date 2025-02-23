@@ -1,4 +1,9 @@
 // import Image from 'next/image';
+import Banner from '@/components/banner';
+import Footer from '@/components/footer';
+import Header from '@/components/header';
+import Skills from '@/components/skills';
+import Projects from '@/components/projects';
 
 export default function Home() {
   return (
@@ -7,19 +12,24 @@ export default function Home() {
         <main className="container flex flex-col gap-8 items-center bg-red-100">
           MAIN
           {/* TODO: Section - Opener line, see what ive built*/}
+          <Banner />
           {/* TODO: Section - Selected Projects */}
+          <Projects />
           {/* TODO: Section - Contributions*/}
           {/* TODO: Section - Freelance Testimonials*/}
           {/* TODO: Section - My Skill Set*/}
+          <Skills />
           {/* TODO: Section - Contact Me*/}
         </main>
         <header className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
           header
+          <Header />
           {/* TODO: name */}
           {/* TODO: dropdown */}
         </header>
         <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
           footer
+          <Footer />
           {/* TODO: year/creator */}
           {/* TODO: crafted in denver*/}
           {/* TODO: options - email/linkedin/GH */}
