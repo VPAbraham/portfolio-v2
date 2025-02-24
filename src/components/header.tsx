@@ -1,8 +1,8 @@
 export default function Header() {
   return (
-    <header className="container grid grid-cols-2">
-      <h3 className="">VICTOR ABRAHAM</h3>
-      <div className="dd-container">
+    <header className="p-4 container flex justify-between">
+      <p className="text-8x1">VICTOR ABRAHAM</p>
+      <div className="flex flex-auto justify-end dd-container">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn m-1">
             Menu

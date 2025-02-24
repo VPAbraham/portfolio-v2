@@ -10,7 +10,7 @@ export default function Home() {
     <div className="flex flex-col items-center justify-items-center font-[family-name:var(--font-geist-sans)] bg-blue-50">
       <Header />
       <div className="container mx-auto border border-black min-h-screen bg-green-100">
-        <main className="container flex flex-col gap-8 items-center bg-red-100">
+        <main className="container flex flex-col items-center bg-red-30">
           MAIN
           {/* TODO: Section - Opener line, see what ive built*/}
           <Banner />
