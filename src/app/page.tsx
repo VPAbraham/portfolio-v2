@@ -12,14 +12,14 @@ export default function Home() {
       <div className="container mx-auto border border-black min-h-screen bg-green-100">
         <main className="container flex flex-col items-center bg-red-30">
           MAIN
-          {/* TODO: Section - Opener line, see what ive built*/}
           <Banner />
-          {/* TODO: Section - Selected Projects */}
+          <Skills />
           <Projects />
+          {/* TODO: Section - Opener line, see what ive built*/}
+          {/* TODO: Section - Selected Projects */}
           {/* TODO: Section - Contributions*/}
           {/* TODO: Section - Freelance Testimonials*/}
           {/* TODO: Section - My Skill Set*/}
-          <Skills />
           {/* TODO: Section - Contact Me*/}
         </main>
       </div>
