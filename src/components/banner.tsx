@@ -4,9 +4,9 @@ export default function Banner() {
       <div>
         <p>I BUILD THINGS WITH MY COMPUTER</p>
       </div>
-      <div className="flex">
+      <a className="flex">
         <span>See what I have been working on</span>
-      </div>
+      </a>
     </div>
   );
 }
