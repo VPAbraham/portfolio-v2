@@ -1,3 +1,4 @@
+'use-client';
 import { ReactNode } from 'react';
 import { skillsCollection } from '@/app/lib/skills-data';
 import { Skill } from '@/types/skills';

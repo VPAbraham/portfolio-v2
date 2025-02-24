@@ -1,7 +1,5 @@
-import Arrow from '@/assets/arrow.svg';
-
+'use-client';
 export default function Banner() {
-  console.log(Arrow);
   return (
     <div className="container flex flex-col px-4">
       <div>

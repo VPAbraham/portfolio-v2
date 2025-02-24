@@ -1,3 +1,4 @@
+'use-client';
 export default function Header() {
   return (
     <header className="p-4 container flex justify-between">

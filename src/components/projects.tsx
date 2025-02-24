@@ -1,3 +1,4 @@
+'use-client';
 import { projectsCollection } from '@/app/lib/projects-data';
 import type { Project } from '@/types/projects';
 

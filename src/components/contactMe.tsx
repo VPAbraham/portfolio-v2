@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import emailjs from 'emailjs-com';
 
 export default function ContactMe() {
   const [email, setEmail] = useState('');
@@ -7,7 +8,10 @@ export default function ContactMe() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    alert('Message sent! (Integration pending)');
+    emailjs
+      .send('service_id', 'template_id', { email, message }, 'user_id')
+      .then(() => alert('Message sent!'))
+      .catch(() => alert('Failed to send'));
   };
 
   return (

@@ -4,6 +4,7 @@ import Footer from '@/components/footer';
 import Header from '@/components/header';
 import Skills from '@/components/skills';
 import Projects from '@/components/projects';
+import ContactMe from '@/components/contactMe';
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
           {/* TODO: Section - Freelance Testimonials*/}
           {/* TODO: Section - My Skill Set*/}
           {/* TODO: Section - Contact Me*/}
+          <ContactMe />
         </main>
       </div>
       <Footer />
