@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Personal Portfolio - Next.js Facelift
 
-## Getting Started
+Overview
 
-First, run the development server:
+This project is a complete redesign and modernization of my previous portfolio page. It leverages the power of Next.js for performance and scalability, along with Tailwind CSS and daisyUI for a sleek, responsive, and accessible UI.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Tech Stack
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Next.js – Optimized React framework for server-side rendering and static site generation.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+TypeScript – Ensuring type safety and better development experience.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Tailwind CSS – Utility-first styling for a modern, responsive design.
 
-## Learn More
+daisyUI – A Tailwind-based component library for pre-styled UI elements.
 
-To learn more about Next.js, take a look at the following resources:
+Framer Motion – Smooth animations and transitions.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+React Icons – Collection of icons for visual enhancement.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Features
 
-## Deploy on Vercel
+🚀 Blazing fast performance with Next.js optimizations.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+🎨 Modern UI using Tailwind CSS and daisyUI.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+🖼 Projects showcase with image previews, descriptions, and links.
+
+🔗 Social links to connect with me across platforms.
+
+📱 Fully responsive design for desktop and mobile users.
+
+Getting Started
+
+To run the project locally:
+
+npm install # Install dependencies
+npm run dev # Start the development server
+
+pnpm also available for use
+
+Then, open http://localhost:3000 in your browser.
+
+Deployment
+
+This portfolio is optimized for deployment on Vercel, the recommended hosting platform for Next.js applications.
+
+To deploy:
+
+Push your code to a GitHub repository.
+
+Connect the repo to Vercel.
+
+Deploy with automatic builds and optimizations.
+
+Contributions
+
+While this is a personal portfolio, feedback and suggestions are welcome! Feel free to fork the repository and submit PRs.
+
+Made with ❤️ using Next.js and Tailwind CSS.
