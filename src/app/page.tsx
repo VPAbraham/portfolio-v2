@@ -1,5 +1,5 @@
 // import Image from 'next/image';
-import Banner from '@/components/banner';
+import Hero from '@/components/hero';
 import Footer from '@/components/footer';
 import Header from '@/components/header';
 import Skills from '@/components/skills';
@@ -13,7 +13,7 @@ export default function Home() {
       <div className="container mx-auto border border-black min-h-screen bg-green-100">
         <main className="container flex flex-col items-center bg-red-30">
           MAIN
-          <Banner />
+          <Hero />
           <Skills />
           <Projects />
           {/* TODO: Section - Opener line, see what ive built*/}
