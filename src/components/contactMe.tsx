@@ -5,13 +5,26 @@ import emailjs from 'emailjs-com';
 export default function ContactMe() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setLoading(true);
+
     emailjs
-      .send('service_id', 'template_id', { email, message }, 'user_id')
-      .then(() => alert('Message sent!'))
-      .catch(() => alert('Failed to send'));
+      .send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        { email, message },
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+      )
+      .then(() => {
+        alert('Message sent successfully!');
+        setEmail('');
+        setMessage('');
+      })
+      .catch(() => alert('Failed to send message'))
+      .finally(() => setLoading(false));
   };
 
   return (
@@ -24,6 +37,7 @@ export default function ContactMe() {
         <form onSubmit={handleSubmit} className="w-full md:w-2/3 space-y-4">
           <input
             type="email"
+            name="email"
             placeholder="Your email address"
             className="input input-bordered w-full"
             value={email}
@@ -31,14 +45,19 @@ export default function ContactMe() {
             required
           />
           <textarea
+            name="message"
             placeholder="Your message..."
             className="textarea textarea-bordered w-full h-32"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             required
           />
-          <button type="submit" className="btn btn-primary w-full">
-            Send
+          <button
+            type="submit"
+            className="btn btn-primary w-full"
+            disabled={loading}
+          >
+            {loading ? 'Sending...' : 'Send'}
           </button>
         </form>
       </div>
