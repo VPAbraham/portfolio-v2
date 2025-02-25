@@ -11,7 +11,7 @@ export default function Footer() {
         {/* Right Column: Social Links */}
         <div className="flex space-x-4 mt-4 md:mt-0">
           <a
-            href="https://github.com/your-github"
+            href="https://github.com/vpabraham"
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-ghost btn-sm"
@@ -31,7 +31,7 @@ export default function Footer() {
           </a>
 
           <a
-            href="https://linkedin.com/in/your-linkedin"
+            href="https://linkedin.com/in/victorpabraham"
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-ghost btn-sm"
@@ -46,10 +46,7 @@ export default function Footer() {
             </svg>
           </a>
 
-          <a
-            href="mailto:your-email@example.com"
-            className="btn btn-ghost btn-sm"
-          >
+          <a href="mailto:vpa456@gmail.com" className="btn btn-ghost btn-sm">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
