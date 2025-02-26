@@ -2,21 +2,76 @@ import { SkillsCollection } from '@/types/skills';
 
 export const skillsCollection: SkillsCollection = {
   languages: [
-    { id: 'javascript', name: 'JavaScript (ES6+)', logoLink: '' },
-    { id: 'typescript', name: 'TypeScript', logoLink: '' },
-    { id: 'html', name: 'HTML', logoLink: '' },
-    { id: 'css', name: 'CSS/SCSS/SASS', logoLink: '' },
-    { id: 'python', name: 'Python', logoLink: '' },
-    { id: 'sql', name: 'SQL', logoLink: '' },
+    {
+      id: 'javascript',
+      name: 'JavaScript (ES6+)',
+      logoLink:
+        'https://upload.wikimedia.org/wikipedia/commons/6/64/JavaScript-logo.png',
+    },
+    {
+      id: 'typescript',
+      name: 'TypeScript',
+      logoLink:
+        'https://upload.wikimedia.org/wikipedia/commons/4/4e/Typescript_logo_2020.svg',
+    },
+    {
+      id: 'html',
+      name: 'HTML',
+      logoLink:
+        'https://upload.wikimedia.org/wikipedia/commons/6/60/HTML5_logo_and_wordmark.svg',
+    },
+    {
+      id: 'css',
+      name: 'CSS/SCSS/SASS',
+      logoLink:
+        'https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg',
+    },
+    {
+      id: 'python',
+      name: 'Python',
+      logoLink:
+        'https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg',
+    },
+    {
+      id: 'sql',
+      name: 'SQL',
+      logoLink:
+        'https://upload.wikimedia.org/wikipedia/commons/3/3f/SQL_Logo.svg',
+    },
   ],
   frontend: [
-    { id: 'react', name: 'React (Hooks)', logoLink: '' },
-    { id: 'angular', name: 'Angular', logoLink: '' },
-    { id: 'nextjs', name: 'Next.js', logoLink: '' },
-    { id: 'redux', name: 'Redux', logoLink: '' },
+    {
+      id: 'react',
+      name: 'React (Hooks)',
+      logoLink:
+        'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg',
+    },
+    {
+      id: 'angular',
+      name: 'Angular',
+      logoLink:
+        'https://upload.wikimedia.org/wikipedia/commons/9/96/Angular_logo.svg',
+    },
+    {
+      id: 'nextjs',
+      name: 'Next.js',
+      logoLink:
+        'https://upload.wikimedia.org/wikipedia/commons/8/8e/Next.js_Logo.svg',
+    },
+    {
+      id: 'redux',
+      name: 'Redux',
+      logoLink:
+        'https://upload.wikimedia.org/wikipedia/commons/3/3a/Redux_logo.png',
+    },
     { id: 'context-api', name: 'Context API', logoLink: '' },
     { id: 'ngrx', name: 'NgRx', logoLink: '' },
-    { id: 'tailwind', name: 'Tailwind CSS', logoLink: '' },
+    {
+      id: 'tailwind',
+      name: 'Tailwind CSS',
+      logoLink:
+        'https://upload.wikimedia.org/wikipedia/commons/6/60/Tailwind_CSS_Logo.svg',
+    },
     { id: 'mui', name: 'Material UI', logoLink: '' },
     { id: 'storybook', name: 'StorybookJS', logoLink: '' },
     { id: 'chartjs', name: 'Chart.js', logoLink: '' },
@@ -24,7 +79,12 @@ export const skillsCollection: SkillsCollection = {
     { id: 'accessibility', name: 'WCAG/ARIA Compliance', logoLink: '' },
   ],
   backend: [
-    { id: 'nodejs', name: 'Node.js', logoLink: '' },
+    {
+      id: 'nodejs',
+      name: 'Node.js',
+      logoLink:
+        'https://upload.wikimedia.org/wikipedia/commons/6/64/Node.js_logo_2015.svg',
+    },
     { id: 'express', name: 'Express.js', logoLink: '' },
     { id: 'graphql', name: 'GraphQL (Apollo Client)', logoLink: '' },
     { id: 'rest-api', name: 'REST API', logoLink: '' },

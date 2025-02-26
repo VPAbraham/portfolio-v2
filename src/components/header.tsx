@@ -1,29 +1,60 @@
-'use-client';
-export default function Header() {
+'use client';
+import { useState, useRef, useEffect } from 'react';
+
+const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (menuRef.current && !menuRef.current.contains(e.target)) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
   return (
-    <header className="p-4 container flex justify-between">
-      <p className="text-8x1">VICTOR ABRAHAM</p>
-      <div className="flex flex-auto justify-end dd-container">
-        <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn m-1">
-            Menu
-          </div>
-          <ul
-            tabIndex={0}
-            className="dropdown-content bg-gray-50 menu rounded-box z-[1] w-52 p-2 shadow"
+    <header className="container flex justify-between items-end py-4">
+      {/* Left: Name */}
+      <p className="text-3xl font-bold tracking-wide">VICTOR ABRAHAM</p>
+
+      {/* Right: Hamburger Menu */}
+      <div ref={menuRef} className="relative">
+        <button
+          onClick={() => setIsOpen((prev) => !prev)}
+          className="btn btn-ghost btn-circle"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
           >
-            <li>
-              <a>Home</a>
-            </li>
-            <li>
-              <a>Skills</a>
-            </li>
-            <li>
-              <a>Projects</a>
-            </li>
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </button>
+
+        {/* Dropdown Menu */}
+        {isOpen && (
+          <ul className="absolute right-0 mt-2 w-48 bg-white rounded-lg p-2 border border-gray-300">
+            {['Home', 'Skills', 'Projects'].map((item) => (
+              <li key={item}>
+                <a className="block py-2 px-4 hover:bg-gray-100">{item}</a>
+              </li>
+            ))}
           </ul>
-        </div>
+        )}
       </div>
     </header>
   );
-}
+};
+
+export default Header;

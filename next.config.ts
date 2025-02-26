@@ -10,6 +10,9 @@ const nextConfig: NextConfig = {
 
     return config;
   },
+  images: {
+    domains: ['upload.wikimedia.org'],
+  },
 };
 
 export default nextConfig;
