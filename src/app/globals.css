@@ -18,6 +18,51 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
   transition: background 0.2s ease, color 0.2s ease;
 }
+
+/* Typography styles for headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-space-grotesk);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+/* Custom utility classes for typography */
+.hero-text {
+  font-family: var(--font-space-grotesk);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.1; /* Tighter line height */
+}
+
+.hero-heading {
+  font-family: var(--font-space-grotesk);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.site-name {
+  font-family: var(--font-space-grotesk);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.nav-link {
+  font-family: var(--font-geist-sans);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.mono {
+  font-family: var(--font-geist-mono);
+}
+
+/* Note: The PP Neue Montreal font would require a proper license and hosting */

@@ -9,18 +9,22 @@ const Header = () => {
   };
 
   return (
-    <>
-      <header className="fixed top-0 left-0 w-full bg-white z-50 py-4">
-        <div className="container mx-auto flex justify-between items-center px-6 lg:px-12">
+    <div className="fixed top-0 left-0 w-full z-50">
+      <header className="bg-white border-b border-gray-200">
+        <div className="mx-auto max-w-5xl px-6 lg:px-8 py-4 flex justify-between items-center">
           {/* Name / Logo */}
-          <p className="text-2xl font-bold text-gray-900">VICTOR ABRAHAM</p>
-          {/* Menu Toggle */}
+          <p className="text-2xl site-name text-gray-900 uppercase">
+            VICTOR ABRAHAM
+          </p>
+
+          {/* Toggle button - hamburger or X */}
           <button
             onClick={toggleMenu}
             className="text-gray-900"
             aria-label="Toggle menu"
           >
             {isOpen ? (
+              // X icon when menu is open
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -36,6 +40,7 @@ const Header = () => {
                 <line x1="6" y1="6" x2="18" y2="18"></line>
               </svg>
             ) : (
+              // Hamburger icon when menu is closed
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -56,16 +61,16 @@ const Header = () => {
         </div>
       </header>
 
-      {/* Dropdown Menu */}
+      {/* Centered Menu with borders */}
       {isOpen && (
-        <div className="fixed top-[60px] w-full bg-white shadow-md py-4 z-40">
-          <div className="container mx-auto px-6 lg:px-12">
-            <nav className="flex flex-row justify-center space-x-8">
+        <div className="bg-gray-100 border-b border-gray-200">
+          <div className="mx-auto max-w-5xl px-6 lg:px-8 py-4">
+            <nav className="grid grid-cols-4 gap-4">
               {['Home', 'Skills', 'Projects', 'Contact'].map((item) => (
                 <a
                   key={item}
                   href={`#${item.toLowerCase()}`}
-                  className="text-lg font-medium text-gray-600 hover:text-gray-900 transition-colors"
+                  className="py-3 text-center nav-link text-gray-800 hover:text-gray-900 transition-colors border border-gray-300 bg-white"
                   onClick={() => setIsOpen(false)}
                 >
                   {item}
@@ -75,7 +80,7 @@ const Header = () => {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 };
 
