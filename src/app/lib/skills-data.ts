@@ -5,136 +5,188 @@ export const skillsCollection: SkillsCollection = {
     {
       id: 'javascript',
       name: 'JavaScript (ES6+)',
-      logoLink:
-        'https://upload.wikimedia.org/wikipedia/commons/6/64/JavaScript-logo.png',
+      logoLink: '/logo-images/JavaScript.svg', // Local SVG logo
     },
     {
       id: 'typescript',
       name: 'TypeScript',
-      logoLink:
-        'https://upload.wikimedia.org/wikipedia/commons/4/4e/Typescript_logo_2020.svg',
+      logoLink: '/logo-images/TypeScript.svg',
     },
     {
       id: 'html',
       name: 'HTML',
-      logoLink:
-        'https://upload.wikimedia.org/wikipedia/commons/6/60/HTML5_logo_and_wordmark.svg',
+      logoLink: '/logo-images/HTML.svg',
     },
     {
       id: 'css',
       name: 'CSS/SCSS/SASS',
-      logoLink:
-        'https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg',
+      logoLink: '/logo-images/CSS.svg',
     },
     {
       id: 'python',
       name: 'Python',
-      logoLink:
-        'https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg',
+      logoLink: '/logo-images/Python.svg',
     },
     {
       id: 'sql',
       name: 'SQL',
-      logoLink:
-        'https://upload.wikimedia.org/wikipedia/commons/3/3f/SQL_Logo.svg',
+      logoLink: '/logo-images/SQL.svg',
     },
   ],
   frontend: [
     {
       id: 'react',
       name: 'React (Hooks)',
-      logoLink:
-        'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg',
+      logoLink: '/logo-images/React.svg',
     },
     {
       id: 'angular',
       name: 'Angular',
-      logoLink:
-        'https://upload.wikimedia.org/wikipedia/commons/9/96/Angular_logo.svg',
+      logoLink: '/logo-images/Angular.svg',
     },
     {
       id: 'nextjs',
       name: 'Next.js',
-      logoLink:
-        'https://upload.wikimedia.org/wikipedia/commons/8/8e/Next.js_Logo.svg',
+      logoLink: '/logo-images/Next.js.svg',
     },
     {
       id: 'redux',
       name: 'Redux',
-      logoLink:
-        'https://upload.wikimedia.org/wikipedia/commons/3/3a/Redux_logo.png',
+      logoLink: '/logo-images/Redux.svg',
     },
-    { id: 'context-api', name: 'Context API', logoLink: '' },
-    { id: 'ngrx', name: 'NgRx', logoLink: '' },
+    {
+      id: 'context-api',
+      name: 'Context API',
+      logoLink: '/logo-images/Context-API.svg',
+    },
+    { id: 'ngrx', name: 'NgRx', logoLink: '/logo-images/NgRx.svg' },
     {
       id: 'tailwind',
       name: 'Tailwind CSS',
-      logoLink:
-        'https://upload.wikimedia.org/wikipedia/commons/6/60/Tailwind_CSS_Logo.svg',
+      logoLink: '/logo-images/Tailwind.svg',
     },
-    { id: 'mui', name: 'Material UI', logoLink: '' },
-    { id: 'storybook', name: 'StorybookJS', logoLink: '' },
-    { id: 'chartjs', name: 'Chart.js', logoLink: '' },
-    { id: 'rxjs', name: 'RxJS', logoLink: '' },
-    { id: 'accessibility', name: 'WCAG/ARIA Compliance', logoLink: '' },
+    {
+      id: 'mui',
+      name: 'Material UI',
+      logoLink: '/logo-images/Material-UI.svg',
+    },
+    {
+      id: 'storybook',
+      name: 'StorybookJS',
+      logoLink: '/logo-images/StorybookJS.svg',
+    },
+    { id: 'chartjs', name: 'Chart.js', logoLink: '/logo-images/Chart.js.svg' },
+    { id: 'rxjs', name: 'RxJS', logoLink: '/logo-images/RxJS.svg' },
+    {
+      id: 'accessibility',
+      name: 'WCAG/ARIA Compliance',
+      logoLink: '/logo-images/Accessibility.svg',
+    },
   ],
   backend: [
     {
       id: 'nodejs',
       name: 'Node.js',
-      logoLink:
-        'https://upload.wikimedia.org/wikipedia/commons/6/64/Node.js_logo_2015.svg',
+      logoLink: '/logo-images/Node.js.svg',
     },
-    { id: 'express', name: 'Express.js', logoLink: '' },
-    { id: 'graphql', name: 'GraphQL (Apollo Client)', logoLink: '' },
-    { id: 'rest-api', name: 'REST API', logoLink: '' },
-    { id: 'ruby-on-rails', name: 'Ruby on Rails', logoLink: '' },
-    { id: 'stripe', name: 'Stripe (Payments)', logoLink: '' },
+    { id: 'express', name: 'Express.js', logoLink: '/logo-images/Express.svg' },
+    {
+      id: 'graphql',
+      name: 'GraphQL (Apollo Client)',
+      logoLink: '/logo-images/GraphQL.svg',
+    },
+    { id: 'rest-api', name: 'REST API', logoLink: '/logo-images/REST-API.svg' },
+    {
+      id: 'ruby-on-rails',
+      name: 'Ruby on Rails',
+      logoLink: '/logo-images/Ruby-on-Rails.svg',
+    },
+    {
+      id: 'stripe',
+      name: 'Stripe (Payments)',
+      logoLink: '/logo-images/Stripe.svg',
+    },
   ],
   database: [
-    { id: 'mongodb', name: 'MongoDB', logoLink: '' },
-    { id: 'sql', name: 'SQL', logoLink: '' },
+    { id: 'mongodb', name: 'MongoDB', logoLink: '/logo-images/MongoDB.svg' },
+    { id: 'sql', name: 'SQL', logoLink: '/logo-images/SQL.svg' },
   ],
   cloud: [
     {
       id: 'aws',
       name: 'AWS (CloudWatch, CodePipeline, CodeBuild)',
-      logoLink: '',
+      logoLink: '/logo-images/AWS.svg',
     },
-    { id: 'vercel', name: 'Vercel (Next.js Deployment)', logoLink: '' },
-    { id: 'sendgrid', name: 'SendGrid (Email Campaigns)', logoLink: '' },
+    {
+      id: 'vercel',
+      name: 'Vercel (Next.js Deployment)',
+      logoLink: '/logo-images/Vercel.svg',
+    },
+    {
+      id: 'sendgrid',
+      name: 'SendGrid (Email Campaigns)',
+      logoLink: '/logo-images/SendGrid.svg',
+    },
   ],
   devops: [
-    { id: 'git', name: 'Git', logoLink: '' },
-    { id: 'github', name: 'GitHub', logoLink: '' },
-    { id: 'ci-cd', name: 'CI/CD Pipelines (GitHub Actions)', logoLink: '' },
-    { id: 'webpack', name: 'Webpack', logoLink: '' },
+    { id: 'git', name: 'Git', logoLink: '/logo-images/Git.svg' },
+    { id: 'github', name: 'GitHub', logoLink: '/logo-images/GitHub.svg' },
+    {
+      id: 'ci-cd',
+      name: 'CI/CD Pipelines (GitHub Actions)',
+      logoLink: '/logo-images/Ci-Cd.svg',
+    },
+    { id: 'webpack', name: 'Webpack', logoLink: '/logo-images/Webpack.svg' },
   ],
   testing: [
-    { id: 'jest', name: 'Jest', logoLink: '' },
-    { id: 'cypress', name: 'Cypress', logoLink: '' },
-    { id: 'mocha', name: 'Mocha', logoLink: '' },
-    { id: 'chai', name: 'Chai', logoLink: '' },
-    { id: 'selenium', name: 'Selenium', logoLink: '' },
-    { id: 'sauce-labs', name: 'Sauce Labs', logoLink: '' },
+    { id: 'jest', name: 'Jest', logoLink: '/logo-images/Jest.svg' },
+    { id: 'cypress', name: 'Cypress', logoLink: '/logo-images/Cypress.svg' },
+    { id: 'mocha', name: 'Mocha', logoLink: '/logo-images/Mocha.svg' },
+    { id: 'chai', name: 'Chai', logoLink: '/logo-images/Chai.svg' },
+    { id: 'selenium', name: 'Selenium', logoLink: '/logo-images/Selenium.svg' },
+    {
+      id: 'sauce-labs',
+      name: 'Sauce Labs',
+      logoLink: '/logo-images/Sauce-Labs.svg',
+    },
     {
       id: 'lighthouse',
       name: 'Lighthouse (Performance/Accessibility)',
-      logoLink: '',
+      logoLink: '/logo-images/Lighthouse.svg',
     },
     {
       id: 'react-testing-library',
       name: 'React Testing Library',
-      logoLink: '',
+      logoLink: '/logo-images/React-Testing-Library.svg',
     },
   ],
   design: [
-    { id: 'figma', name: 'Figma (UI Collaboration)', logoLink: '' },
-    { id: 'ux', name: 'UI/UX Design Collaboration', logoLink: '' },
+    {
+      id: 'figma',
+      name: 'Figma (UI Collaboration)',
+      logoLink: '/logo-images/Figma.svg',
+    },
+    {
+      id: 'ux',
+      name: 'UI/UX Design Collaboration',
+      logoLink: '/logo-images/UX.svg',
+    },
   ],
   projectManagement: [
-    { id: 'jira', name: 'JIRA (Agile Workflow)', logoLink: '' },
-    { id: 'loes', name: 'Level of Effort (LOE) Planning', logoLink: '' },
-    { id: 'agile', name: 'Agile Methodologies', logoLink: '' },
+    {
+      id: 'jira',
+      name: 'JIRA (Agile Workflow)',
+      logoLink: '/logo-images/Jira.svg',
+    },
+    {
+      id: 'loes',
+      name: 'Level of Effort (LOE) Planning',
+      logoLink: '/logo-images/LOE.svg',
+    },
+    {
+      id: 'agile',
+      name: 'Agile Methodologies',
+      logoLink: '/logo-images/Agile.svg',
+    },
   ],
 };

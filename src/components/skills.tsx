@@ -1,11 +1,10 @@
 'use-client';
-import { ReactNode } from 'react';
 import { skillsCollection } from '@/app/lib/skills-data';
 import { Skill } from '@/types/skills';
 import Image from 'next/image';
 
 export default function Skills() {
-  const SkillsSection: ReactNode = Object.entries(skillsCollection).map(
+  const SkillsSection = Object.entries(skillsCollection).map(
     ([category, skillList]) => (
       <div key={category} className="mb-6">
         <h2 className="text-xl font-bold capitalize mb-4">{category}</h2>
@@ -15,12 +14,12 @@ export default function Skills() {
               key={skill.id}
               className="relative flex flex-col items-center justify-center hover:bg-gray-200 transition duration-300 ease-in-out"
             >
-              {/* Image Icon */}
               <div className="relative w-16 h-16 mb-2">
                 <Image
-                  src={skill.logoLink}
+                  src={`/logo-images/${skill.name}.svg`}
                   alt={skill.name}
-                  layout="fill"
+                  width={64}
+                  height={64}
                   objectFit="contain"
                   className="rounded-full opacity-80 group-hover:opacity-100"
                 />
