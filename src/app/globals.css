@@ -18,7 +18,7 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  font-family: var(--font-space-grotesk), Arial, Helvetica, sans-serif;
   transition: background 0.2s ease, color 0.2s ease;
 }
 
@@ -42,13 +42,6 @@ h6 {
   line-height: 1.1; /* Tighter line height */
 }
 
-.hero-heading {
-  font-family: var(--font-space-grotesk);
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  text-transform: uppercase;
-}
-
 .site-name {
   font-family: var(--font-space-grotesk);
   font-weight: 700;
@@ -56,13 +49,18 @@ h6 {
 }
 
 .nav-link {
-  font-family: var(--font-geist-sans);
+  font-family: var(--font-space-grotesk);
   font-weight: 500;
   letter-spacing: 0.02em;
+}
+
+/* Category headings in skill sections */
+.skill-category {
+  font-family: var(--font-space-grotesk);
+  font-weight: 600;
+  letter-spacing: 0.01em;
 }
 
 .mono {
   font-family: var(--font-geist-mono);
 }
-
-/* Note: The PP Neue Montreal font would require a proper license and hosting */
