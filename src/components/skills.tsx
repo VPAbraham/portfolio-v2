@@ -16,18 +16,15 @@ export default function Skills() {
             >
               <div className="relative w-16 h-16 mb-2">
                 <Image
-                  src={`/logo-images/${skill.name}.svg`}
+                  src={`/logo-images/${skill.logoLink}`}
                   alt={skill.name}
                   width={64}
                   height={64}
                   objectFit="contain"
-                  className="rounded-full opacity-80 group-hover:opacity-100"
+                  className="opacity-80 group-hover:opacity-100"
                 />
               </div>
-              {/* Skill Name with Hover */}
-              <p className="text-center text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
-                {skill.name}
-              </p>
+              <p className="text-center text-sm font-medium">{skill.name}</p>
             </div>
           ))}
         </div>
