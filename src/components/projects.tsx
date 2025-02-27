@@ -2,6 +2,7 @@
 import { projectsCollection } from '@/app/lib/projects-data';
 import type { Project } from '@/types/projects';
 import { useState } from 'react';
+import Image from 'next/image';
 
 export default function Projects() {
   // Track image loading errors
@@ -83,7 +84,7 @@ export default function Projects() {
             {/* Project Image */}
             <div className="md:w-1/2 mt-6 md:mt-0 md:ml-6">
               {!imageErrors[project.id] ? (
-                <img
+                <Image
                   src={project.imageUrl}
                   alt={project.name}
                   className="w-full h-64 rounded-lg shadow-md object-cover"

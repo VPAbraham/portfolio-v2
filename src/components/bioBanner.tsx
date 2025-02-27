@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import Image from 'next/image';
 
 export default function BioBanner() {
   const [showMore, setShowMore] = useState(false);
@@ -8,7 +9,7 @@ export default function BioBanner() {
     <section className="w-full py-12 border-b border-gray-100">
       <div className="flex flex-col md:flex-row gap-8 items-center">
         <div className="w-32 h-32 md:w-48 md:h-48 relative rounded-full overflow-hidden border-4 border-white shadow-lg">
-          <img
+          <Image
             src="/profile-photo.jpg"
             alt="Victor Abraham"
             className="object-cover w-full h-full"

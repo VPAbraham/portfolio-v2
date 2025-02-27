@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import Image from 'next/image';
 
 // Define the testimonial type
 interface Testimonial {
@@ -32,7 +33,7 @@ export default function Testimonials() {
       company: 'InnovateSoft',
       image: '/testimonials/michael.jpg',
       content:
-        "Working alongside Victor was a fantastic experience. His deep knowledge of React and Next.js elevated our entire project. He's a team player who's always willing to share knowledge and help others. The performance optimizations he implemented reduced our load times by 40%.",
+        'Working alongside Victor was a fantastic experience. His deep knowledge of React and Next.js elevated our entire project. He&apos;s a team player who&apos;s always willing to share knowledge and help others. The performance optimizations he implemented reduced our load times by 40%.',
       relationship: 'Colleague',
     },
     {
@@ -42,26 +43,42 @@ export default function Testimonials() {
       company: 'Digital Solutions Inc.',
       image: '/testimonials/lisa.jpg',
       content:
-        "Victor bridged the gap between design and development beautifully. He's highly collaborative and communicative, making the product development process smooth and efficient. His ability to translate complex requirements into elegant interfaces was remarkable.",
+        'Victor bridged the gap between design and development beautifully. He&apos;s highly collaborative and communicative, making the product development process smooth and efficient. His ability to translate complex requirements into elegant interfaces was remarkable.',
       relationship: 'Client',
     },
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);
+  const [imgError, setImgError] = useState(false);
 
   const nextTestimonial = () => {
     setActiveIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+    setImgError(false);
   };
 
   const prevTestimonial = () => {
     setActiveIndex(
       (prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length
     );
+    setImgError(false);
   };
 
   const handleDotClick = (index: number) => {
     setActiveIndex(index);
+    setImgError(false);
   };
+
+  const handleImageError = () => {
+    setImgError(true);
+  };
+
+  // Get the current testimonial's image or fallback
+  const imageUrl =
+    imgError || !testimonials[activeIndex].image
+      ? `https://ui-avatars.com/api/?name=${encodeURIComponent(
+          testimonials[activeIndex].name
+        )}&background=e0e8ff&color=4b6bfb&size=128`
+      : testimonials[activeIndex].image;
 
   return (
     <section id="testimonials" className="w-full py-16 my-12">
@@ -75,17 +92,26 @@ export default function Testimonials() {
           <div className="flex flex-col md:flex-row gap-8 items-center">
             {/* Testimonial image */}
             <div className="w-24 h-24 md:w-32 md:h-32 relative rounded-full overflow-hidden border-4 border-white shadow-md flex-shrink-0">
-              <img
-                src={testimonials[activeIndex].image}
-                alt={testimonials[activeIndex].name}
-                className="object-cover w-full h-full"
-                onError={(e) => {
-                  // Fallback for missing images
-                  e.currentTarget.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(
-                    testimonials[activeIndex].name
-                  )}&background=e0e8ff&color=4b6bfb&size=128`;
-                }}
-              />
+              {imageUrl.startsWith('http') ? (
+                // For external URLs (like the avatar API)
+                <Image
+                  src={imageUrl}
+                  alt={testimonials[activeIndex].name}
+                  className="object-cover w-full h-full"
+                  onError={handleImageError}
+                />
+              ) : (
+                // For local images
+                <Image
+                  src={imageUrl}
+                  alt={testimonials[activeIndex].name}
+                  fill
+                  sizes="(max-width: 768px) 96px, 128px"
+                  className="object-cover"
+                  onError={handleImageError}
+                  priority
+                />
+              )}
             </div>
 
             {/* Testimonial content */}
