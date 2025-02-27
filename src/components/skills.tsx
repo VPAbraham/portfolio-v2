@@ -20,7 +20,7 @@ export default function Skills() {
             <div className="grid grid-cols-3 gap-6">
               {skillList.map((skill: Skill) => (
                 <div key={skill.id} className="flex flex-col items-center">
-                  <div className="rounded bg-blue-50 p-4 w-24 h-24 flex items-center justify-center mb-3">
+                  <div className="bg-gray-100 p-4 w-24 h-24 flex items-center justify-center mb-3">
                     <div className="relative w-14 h-14">
                       <Image
                         src={`/logo-images/${skill.logoLink}`}
