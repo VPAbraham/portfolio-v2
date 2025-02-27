@@ -6,6 +6,7 @@ import Skills from '@/components/skills';
 import Projects from '@/components/projects';
 import ContactMe from '@/components/contactMe';
 import BioBanner from '@/components/bioBanner';
+import Testimonials from '@/components/testimonials';
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
             </section>
 
             <Projects />
+            <Testimonials />
 
             <ContactMe />
           </div>
