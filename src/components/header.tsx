@@ -32,11 +32,11 @@ const Header = () => {
 
   return (
     <header
-      className={`sticky top-0 w-full bg-white z-50 transition-all duration-200 sm: w-11/12 pl-3 py-3${
+      className={`sticky top-0 w-full bg-white z-50 transition-all duration-200 ${
         isScrolled ? 'shadow-md' : ''
       }`}
     >
-      <div className="container mx-auto max-w-6xl flex justify-between items-center px-6 lg:px-8 py-5">
+      <div className="lg:container mx-auto px-8 flex justify-between items-center py-5">
         {/* Logo */}
         <a
           href="#home"
@@ -102,7 +102,7 @@ const Header = () => {
       {/* Mobile Menu Overlay */}
       {isOpen && (
         <div className="fixed inset-0 bg-white z-50 flex flex-col md:hidden">
-          <div className="flex justify-between items-center px-6 py-5">
+          <div className="lg:container mx-auto px-8 flex justify-between items-center py-5">
             <a
               href="#home"
               className="text-2xl font-bold text-gray-900 uppercase tracking-wider"
