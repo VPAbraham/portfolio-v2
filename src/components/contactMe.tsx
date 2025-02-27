@@ -34,16 +34,16 @@ export default function ContactMe() {
             say hello.
           </p>
 
-          <div className="flex space-x-4 mb-6">
+          <div className="flex space-x-6 mb-6">
             <a
               href="https://github.com/vpabraham"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-700 hover:text-gray-900 transition-colors"
+              className="text-gray-700 hover:text-blue-600 transition-colors"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
+                className="h-7 w-7"
                 viewBox="0 0 24 24"
                 fill="currentColor"
               >
@@ -59,11 +59,11 @@ export default function ContactMe() {
               href="https://linkedin.com/in/victorpabraham"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-700 hover:text-gray-900 transition-colors"
+              className="text-gray-700 hover:text-blue-600 transition-colors"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
+                className="h-7 w-7"
                 viewBox="0 0 24 24"
                 fill="currentColor"
               >
@@ -73,11 +73,11 @@ export default function ContactMe() {
 
             <a
               href="mailto:vpa456@gmail.com"
-              className="text-gray-700 hover:text-gray-900 transition-colors"
+              className="text-gray-700 hover:text-blue-600 transition-colors"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
+                className="h-7 w-7"
                 viewBox="0 0 24 24"
                 fill="currentColor"
               >
@@ -88,7 +88,10 @@ export default function ContactMe() {
         </div>
 
         <div className="w-full md:w-2/3">
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form
+            onSubmit={handleSubmit}
+            className="accent-section p-6 rounded-lg space-y-5"
+          >
             <div>
               <input
                 type="text"
@@ -96,7 +99,7 @@ export default function ContactMe() {
                 value={formData.name}
                 onChange={handleChange}
                 placeholder="Your name"
-                className="w-full px-4 py-3 rounded-md bg-gray-100 border border-gray-200 focus:border-gray-300 focus:bg-white focus:outline-none"
+                className="w-full px-4 py-3 rounded-md accent-input focus:accent-input-focus"
                 required
               />
             </div>
@@ -108,7 +111,7 @@ export default function ContactMe() {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="Your email address"
-                className="w-full px-4 py-3 rounded-md bg-gray-100 border border-gray-200 focus:border-gray-300 focus:bg-white focus:outline-none"
+                className="w-full px-4 py-3 rounded-md accent-input focus:accent-input-focus"
                 required
               />
             </div>
@@ -120,7 +123,7 @@ export default function ContactMe() {
                 onChange={handleChange}
                 placeholder="Your message..."
                 rows={6}
-                className="w-full px-4 py-3 rounded-md bg-gray-100 border border-gray-200 focus:border-gray-300 focus:bg-white focus:outline-none resize-none"
+                className="w-full px-4 py-3 rounded-md accent-input focus:accent-input-focus resize-none"
                 required
               ></textarea>
             </div>
@@ -128,7 +131,7 @@ export default function ContactMe() {
             <div>
               <button
                 type="submit"
-                className="w-full md:w-auto px-8 py-3 bg-indigo-500 hover:bg-indigo-600 text-white font-medium rounded-md transition-colors"
+                className="accent-button px-8 py-3 rounded-md font-medium transition-all"
               >
                 Send
               </button>

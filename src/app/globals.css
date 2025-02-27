@@ -6,12 +6,34 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Gradient System - Simplified & More Subtle */
+  --primary-gradient: linear-gradient(120deg, #e0e8ff 0%, #ffffff 100%);
+  --subtle-gradient: linear-gradient(
+    120deg,
+    rgba(224, 232, 255, 0.15) 0%,
+    rgba(255, 255, 255, 0.5) 100%
+  );
+  --hover-gradient: linear-gradient(120deg, #f0f4ff 0%, #ffffff 100%);
+  --accent-border: rgba(224, 232, 255, 0.7);
+  --accent-shadow: rgba(224, 232, 255, 0.5);
 }
 
 /* Explicit Dark Mode (Only Applied When .dark is Added) */
 .dark {
   --background: #0a0a0a;
   --foreground: #ededed;
+
+  /* Dark mode gradient variants */
+  --primary-gradient: linear-gradient(120deg, #1a1d2b 0%, #0a0a0a 100%);
+  --subtle-gradient: linear-gradient(
+    120deg,
+    rgba(26, 29, 43, 0.2) 0%,
+    rgba(10, 10, 10, 0.5) 100%
+  );
+  --hover-gradient: linear-gradient(120deg, #1a1d2b 0%, #131419 100%);
+  --accent-border: rgba(26, 29, 43, 0.7);
+  --accent-shadow: rgba(26, 29, 43, 0.5);
 }
 
 /* Apply Styles */
@@ -63,4 +85,66 @@ h6 {
 
 .mono {
   font-family: var(--font-geist-mono);
+}
+
+/* Gradient utility classes - Simplified */
+@layer components {
+  .accent-card {
+    background: white;
+    border: 1px solid var(--accent-border);
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+  }
+
+  .accent-card:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    border-color: var(--accent-border);
+  }
+
+  .accent-input {
+    background-color: #f7f7f9;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+  }
+
+  .accent-input:focus {
+    background-color: white;
+    border-color: var(--accent-border);
+    box-shadow: 0 0 0 2px var(--accent-shadow);
+    outline: none;
+  }
+
+  .accent-button {
+    background-color: #4b6bfb;
+    color: white;
+    border: none;
+    transition: all 0.3s ease;
+  }
+
+  .accent-button:hover {
+    background-color: #3754cc;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(59, 130, 246, 0.3);
+  }
+
+  .accent-section {
+    border: 1px solid var(--accent-border);
+    border-radius: 0.5rem;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+  }
+
+  .accent-divider {
+    height: 1px;
+    background-color: var(--accent-border);
+    border: none;
+    margin: 2rem 0;
+  }
+
+  /* Skills section image placeholder */
+  .skill-placeholder {
+    background-color: #f0f4ff;
+    color: #4b6bfb;
+    border-radius: 0.375rem;
+  }
 }

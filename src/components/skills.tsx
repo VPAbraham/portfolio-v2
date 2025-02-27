@@ -42,10 +42,7 @@ export default function Skills() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
         {formattedSkillsCollection.map(({ category, displayName, skills }) => (
-          <div
-            key={category}
-            className="border border-gray-100 rounded-lg shadow-sm p-6 md:p-8 bg-white"
-          >
+          <div key={category} className="accent-card rounded-lg p-6 md:p-8">
             <h3 className="text-xl md:text-2xl text-gray-800 font-medium mb-6 capitalize">
               {displayName}
             </h3>
@@ -56,7 +53,7 @@ export default function Skills() {
                   key={skill.id}
                   className="flex flex-col items-center group hover:transform hover:scale-105 transition-transform duration-200"
                 >
-                  <div className="bg-gray-50 rounded-lg p-3 w-16 h-16 md:w-20 md:h-20 flex items-center justify-center mb-2 shadow-sm group-hover:shadow-md transition-shadow">
+                  <div className="bg-white rounded-lg p-3 w-16 h-16 md:w-20 md:h-20 flex items-center justify-center mb-2 shadow-sm group-hover:shadow-md transition-shadow">
                     {!imageErrors[skill.id] ? (
                       <div className="relative w-10 h-10 md:w-12 md:h-12">
                         <Image
@@ -70,7 +67,7 @@ export default function Skills() {
                         />
                       </div>
                     ) : (
-                      <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-gray-200 to-gray-100 rounded-md flex items-center justify-center text-gray-500 font-medium text-xs md:text-sm">
+                      <div className="w-10 h-10 md:w-12 md:h-12 skill-placeholder flex items-center justify-center text-gray-500 font-medium text-xs md:text-sm">
                         {skill.name.substring(0, 2).toUpperCase()}
                       </div>
                     )}
