@@ -36,7 +36,8 @@ const Header = () => {
         isScrolled ? 'shadow-md' : ''
       }`}
     >
-      <div className="lg:container mx-auto px-8 flex justify-between items-center py-5">
+      {/* Regular header always visible */}
+      <div className="lg:container mx-auto px-4 md:px-8 flex justify-between items-center py-5">
         {/* Logo */}
         <a
           href="#home"
@@ -99,10 +100,10 @@ const Header = () => {
         </button>
       </div>
 
-      {/* Mobile Menu Overlay */}
+      {/* Mobile Menu Overlay - using a portal approach to prevent content shift */}
       {isOpen && (
         <div className="fixed inset-0 bg-white z-50 flex flex-col md:hidden">
-          <div className="lg:container mx-auto px-8 flex justify-between items-center py-5">
+          <div className="px-4 md:px-8 flex justify-between items-center py-5">
             <a
               href="#home"
               className="text-2xl font-bold text-gray-900 uppercase tracking-wider"
@@ -132,7 +133,7 @@ const Header = () => {
           </div>
 
           <div className="flex items-center justify-center flex-grow">
-            <nav className="grid grid-cols-1 gap-4 w-full max-w-sm px-6">
+            <nav className="grid grid-cols-1 gap-4 w-full px-4 md:px-6 max-w-sm">
               {['Home', 'Skills', 'Projects', 'Contact'].map((item) => (
                 <a
                   key={item}

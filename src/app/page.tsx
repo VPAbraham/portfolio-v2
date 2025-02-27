@@ -12,7 +12,7 @@ export default function Home() {
 
       <div className="w-full">
         <main className="flex flex-col">
-          <div className="lg:container mx-auto px-8 py-16">
+          <div className="lg:container mx-auto px-4 md:px-8 py-16">
             <Hero />
             <section className="w-full mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-8"></h2>
