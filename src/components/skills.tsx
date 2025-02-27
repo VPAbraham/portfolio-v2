@@ -2,7 +2,7 @@
 import { skillsCollection } from '@/app/lib/skills-data';
 import { Skill } from '@/types/skills';
 import Image from 'next/image';
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 
 export default function Skills() {
   // Function to format category names properly
@@ -22,6 +22,17 @@ export default function Skills() {
       skills: skillList,
     }));
   }, []);
+
+  // Image error handler state
+  const [imageErrors, setImageErrors] = useState<Record<string, boolean>>({});
+
+  // Handle image load error
+  const handleImageError = (skillId: string) => {
+    setImageErrors((prev) => ({
+      ...prev,
+      [skillId]: true,
+    }));
+  };
 
   return (
     <div className="w-full py-12" id="skills">
@@ -46,16 +57,23 @@ export default function Skills() {
                   className="flex flex-col items-center group hover:transform hover:scale-105 transition-transform duration-200"
                 >
                   <div className="bg-gray-50 rounded-lg p-3 w-16 h-16 md:w-20 md:h-20 flex items-center justify-center mb-2 shadow-sm group-hover:shadow-md transition-shadow">
-                    <div className="relative w-10 h-10 md:w-12 md:h-12">
-                      <Image
-                        src={`/logo-images/${skill.logoLink}`}
-                        alt={skill.name}
-                        fill
-                        sizes="(max-width: 768px) 40px, 48px"
-                        style={{ objectFit: 'contain' }}
-                        className="opacity-90 group-hover:opacity-100"
-                      />
-                    </div>
+                    {!imageErrors[skill.id] ? (
+                      <div className="relative w-10 h-10 md:w-12 md:h-12">
+                        <Image
+                          src={`/logo-images/${skill.logoLink}`}
+                          alt={skill.name}
+                          fill
+                          sizes="(max-width: 768px) 40px, 48px"
+                          style={{ objectFit: 'contain' }}
+                          className="opacity-90 group-hover:opacity-100"
+                          onError={() => handleImageError(skill.id)}
+                        />
+                      </div>
+                    ) : (
+                      <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-gray-200 to-gray-100 rounded-md flex items-center justify-center text-gray-500 font-medium text-xs md:text-sm">
+                        {skill.name.substring(0, 2).toUpperCase()}
+                      </div>
+                    )}
                   </div>
                   <p className="text-center text-xs md:text-sm text-gray-700 font-medium">
                     {skill.name}
