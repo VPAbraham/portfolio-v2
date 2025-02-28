@@ -16,7 +16,7 @@ export default function Hero() {
             className="inline-flex items-center text-gray-900 group"
           >
             <span className="mr-2 nav-link tracking-wider text-sm uppercase">
-              SEE WHAT I'VE BUILT
+              SEE WHAT I&apos;VE BUILT
             </span>
             <svg
               xmlns="http://www.w3.org/2000/svg"

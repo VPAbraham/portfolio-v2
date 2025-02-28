@@ -37,7 +37,7 @@ export default function Skills() {
   return (
     <div className="w-full py-12" id="skills">
       <h2 className="text-4xl hero-text text-gray-900 font-bold mb-12">
-        MY SKILL SET
+        My Skill Set
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">

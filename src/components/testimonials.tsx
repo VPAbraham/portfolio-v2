@@ -95,7 +95,10 @@ export default function Testimonials() {
               {imageUrl.startsWith('http') ? (
                 // For external URLs (like the avatar API)
                 <Image
-                  src={imageUrl}
+                  src="/logo-images/react.svg"
+                  // src={imageUrl}
+                  height={64}
+                  width={64}
                   alt={testimonials[activeIndex].name}
                   className="object-cover w-full h-full"
                   onError={handleImageError}
@@ -105,9 +108,9 @@ export default function Testimonials() {
                 <Image
                   src={imageUrl}
                   alt={testimonials[activeIndex].name}
-                  fill
-                  sizes="(max-width: 768px) 96px, 128px"
-                  className="object-cover"
+                  width={128}
+                  height={128}
+                  className="object-cover w-full h-full"
                   onError={handleImageError}
                   priority
                 />
