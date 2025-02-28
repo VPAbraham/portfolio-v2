@@ -89,7 +89,7 @@ export default function BioBanner() {
           <div className="flex flex-wrap gap-4 mt-6">
             <a
               href="/resume.pdf"
-              target="_blank"
+              download="resume.pdf"
               className="accent-button px-5 py-2 rounded-md font-medium transition-all flex items-center"
             >
               <svg
