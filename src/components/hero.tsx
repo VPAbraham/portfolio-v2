@@ -5,9 +5,9 @@ export default function Hero() {
     <section className="relative h-screen flex flex-col items-start justify-center px-6 bg-gradient-to-r from-indigo-100 via-purple-100 to-yellow-50">
       <div className="container mx-auto max-w-6xl">
         <h1 className="text-5xl md:text-7xl hero-text text-gray-900 leading-tight mb-8 uppercase">
-          I BUILD THINGS <br />
-          WITH MY MOUSE <br />
-          AND KEYBOARD.
+          WRITING CODE <br />
+          THAT BRINGS IDEAS <br />
+          TO LIFE.
         </h1>
 
         <div className="mt-12">
@@ -16,7 +16,7 @@ export default function Hero() {
             className="inline-flex items-center text-gray-900 group"
           >
             <span className="mr-2 nav-link tracking-wider text-sm uppercase">
-              SEE WHAT I&apos;VE BUILT
+              SEE WHAT I HAVE BEEN WORKING ON
             </span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
