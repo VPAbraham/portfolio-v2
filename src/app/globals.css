@@ -17,6 +17,10 @@
   --hover-gradient: linear-gradient(120deg, #f0f4ff 0%, #ffffff 100%);
   --accent-border: rgba(224, 232, 255, 0.7);
   --accent-shadow: rgba(224, 232, 255, 0.5);
+
+  /* Work Sans font variable */
+  --font-work-sans: var(--font-work-sans), ui-sans-serif, system-ui,
+    -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 /* Explicit Dark Mode (Only Applied When .dark is Added) */
@@ -85,6 +89,11 @@ h6 {
 
 .mono {
   font-family: var(--font-geist-mono);
+}
+
+/* Work Sans font class */
+.font-work-sans {
+  font-family: var(--font-work-sans);
 }
 
 /* Gradient utility classes - Simplified */

@@ -43,7 +43,7 @@ export default function Skills() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
         {formattedSkillsCollection.map(({ category, displayName, skills }) => (
           <div key={category} className="accent-card rounded-lg p-6 md:p-8">
-            <h3 className="text-xl md:text-2xl text-gray-800 font-medium mb-6 capitalize">
+            <h3 className="text-xl md:text-2xl text-gray-800 font-medium mb-6 capitalize font-work-sans">
               {displayName}
             </h3>
 
@@ -67,12 +67,12 @@ export default function Skills() {
                         />
                       </div>
                     ) : (
-                      <div className="w-10 h-10 md:w-12 md:h-12 skill-placeholder flex items-center justify-center text-gray-500 font-medium text-xs md:text-sm">
+                      <div className="w-10 h-10 md:w-12 md:h-12 skill-placeholder flex items-center justify-center text-gray-500 font-medium text-xs md:text-sm font-work-sans">
                         {skill.name.substring(0, 2).toUpperCase()}
                       </div>
                     )}
                   </div>
-                  <p className="text-center text-xs md:text-sm text-gray-700 font-medium">
+                  <p className="text-center text-xs md:text-sm text-gray-700 font-medium font-work-sans">
                     {skill.name}
                   </p>
                 </div>
