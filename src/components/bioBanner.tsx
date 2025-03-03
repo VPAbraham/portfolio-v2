@@ -11,7 +11,7 @@ export default function BioBanner() {
         <div className="w-32 h-32 md:w-48 md:h-48 relative rounded-full overflow-hidden border-4 border-white shadow-lg">
           <Image
             // src="/profile-photo.jpg"
-            src="logo-images/react.svg"
+            src="/portrait.jpg"
             alt="Victor Abraham"
             width={192}
             height={192}
