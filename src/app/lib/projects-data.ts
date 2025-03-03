@@ -10,6 +10,7 @@ export const projectsCollection: ProjectsCollection = {
       imageUrl: '/images/yoga-streaming.jpg',
       liveLink: 'https://yogalivestream.com',
       githubLink: 'https://github.com/victorabraham/yoga-streaming',
+      technologies: ['react', 'typescript', 'nodejs', 'express'],
     },
     {
       id: 'legal-calc',
@@ -18,6 +19,7 @@ export const projectsCollection: ProjectsCollection = {
         'A web-based calculator for legal professionals to simplify complex financial computations.',
       imageUrl: '/images/legal-calc.jpg',
       githubLink: 'https://github.com/victorabraham/legal-calc',
+      technologies: ['react', 'javascript', 'tailwind'],
     },
     {
       id: 'weather-news',
@@ -26,6 +28,7 @@ export const projectsCollection: ProjectsCollection = {
         'A Samsung Tizen-compatible app delivering real-time weather and news updates.',
       imageUrl: '/images/weather-news.jpg',
       liveLink: 'https://weathernewsapp.com',
+      technologies: ['nextjs', 'sass', 'chartjs'],
     },
   ],
 };

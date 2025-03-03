@@ -5,6 +5,7 @@ export interface Project {
   imageUrl: string;
   liveLink?: string;
   githubLink?: string;
+  technologies?: string[]; // Array of technology names that correspond to icon filenames
 }
 
 export interface ProjectsCollection {
