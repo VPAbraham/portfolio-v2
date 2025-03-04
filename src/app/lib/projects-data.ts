@@ -3,31 +3,49 @@ import { ProjectsCollection } from '@/types/projects';
 export const projectsCollection: ProjectsCollection = {
   projects: [
     {
-      id: 'yoga-streaming',
-      name: 'Yoga Live Streaming Platform',
+      id: 'outer-reach',
+      name: 'Outer Reach Yoga Streaming',
       description:
-        'A seamless live-streaming platform built with React and TypeScript, backed by a Node.js API.',
-      imageUrl: '/images/yoga-streaming.jpg',
-      liveLink: 'https://yogalivestream.com',
-      githubLink: 'https://github.com/victorabraham/yoga-streaming',
+        'A premium yoga streaming platform with HD video lessons, live classes, and personalized training plans.',
+      imageUrl: '/projects/outer-reach.png',
+      liveLink: 'https://outerreach.com',
+      githubLink: 'https://github.com/victorabraham/outer-reach',
       technologies: ['react', 'typescript', 'nodejs', 'express'],
     },
     {
-      id: 'legal-calc',
-      name: 'Legal Calculation Tool',
+      id: 'cannahauler',
+      name: 'CannaHauler',
       description:
-        'A web-based calculator for legal professionals to simplify complex financial computations.',
-      imageUrl: '/images/legal-calc.jpg',
-      githubLink: 'https://github.com/victorabraham/legal-calc',
+        'B2B and B2C professional cannabis transportation logistics software providing route optimization and compliance tracking.',
+      imageUrl: '/projects/cannahualer.png',
+      liveLink: 'https://cannahauler.com',
+      technologies: ['react', 'typescript', 'nodejs', 'mongodb'],
+    },
+    {
+      id: 'legal-thunder',
+      name: 'Legal Thunder Calculator',
+      description:
+        'A comprehensive legal calculation tool for child support, maintenance buyouts, and spousal interest calculations.',
+      imageUrl: '/projects/legal-thunder.png',
+      githubLink: 'https://github.com/victorabraham/legal-thunder',
       technologies: ['react', 'javascript', 'tailwind'],
     },
     {
-      id: 'weather-news',
-      name: 'Weather & News Streaming App',
+      id: 'charter-portal',
+      name: 'Charter Communications Self-Service Portal',
       description:
-        'A Samsung Tizen-compatible app delivering real-time weather and news updates.',
+        'A comprehensive portal for signing up and managing home phone, internet, TV and other telecom services.',
+      imageUrl: '/projects/charter-portal.png',
+      liveLink: 'https://selfservice.charter.com',
+      technologies: ['angular', 'typescript', 'java', 'spring'],
+    },
+    {
+      id: 'charter-streaming',
+      name: 'Charter Communications Sports and News Streaming App',
+      description:
+        'A multi-platform streaming application delivering real-time sports updates, live events, and breaking news.',
       imageUrl: '/images/weather-news.jpg',
-      liveLink: 'https://weathernewsapp.com',
+      liveLink: 'https://charterstreamingapp.com',
       technologies: ['nextjs', 'sass', 'chartjs'],
     },
   ],
