@@ -7,11 +7,21 @@ import Image from 'next/image';
 export default function Projects() {
   // Track image loading errors
   const [imageErrors, setImageErrors] = useState<Record<string, boolean>>({});
+  const [techIconErrors, setTechIconErrors] = useState<Record<string, boolean>>(
+    {}
+  );
 
   const handleImageError = (projectId: string) => {
     setImageErrors((prev) => ({
       ...prev,
       [projectId]: true,
+    }));
+  };
+
+  const handleTechIconError = (techId: string) => {
+    setTechIconErrors((prev) => ({
+      ...prev,
+      [techId]: true,
     }));
   };
 
@@ -28,17 +38,51 @@ export default function Projects() {
           >
             {/* Text Content */}
             <div className="md:w-1/2 text-left">
-              <h3 className="text-2xl font-semibold text-gray-900">
+              <h3 className="text-2xl font-semibold text-gray-900 font-work-sans">
                 {project.name}
               </h3>
               <p className="text-gray-700 mt-2">{project.description}</p>
+
+              {/* Technology Icons */}
+              {project.technologies && project.technologies.length > 0 && (
+                <div className="flex flex-wrap gap-3 mt-4">
+                  {project.technologies.map((tech) => (
+                    <div
+                      key={tech}
+                      className="flex items-center justify-center bg-gray-50 rounded-md py-1 px-2 shadow-sm"
+                      title={tech.charAt(0).toUpperCase() + tech.slice(1)}
+                    >
+                      {!techIconErrors[tech] ? (
+                        <div className="relative w-5 h-5 mr-1">
+                          <Image
+                            src={`/logo-images/${tech}.svg`}
+                            alt={tech}
+                            fill
+                            sizes="20px"
+                            style={{ objectFit: 'contain' }}
+                            onError={() => handleTechIconError(tech)}
+                          />
+                        </div>
+                      ) : (
+                        <span className="w-5 h-5 mr-1 flex items-center justify-center text-xs font-semibold text-gray-600 font-work-sans">
+                          {tech.substring(0, 2).toUpperCase()}
+                        </span>
+                      )}
+                      <span className="text-xs font-medium text-gray-700 font-work-sans">
+                        {tech.charAt(0).toUpperCase() + tech.slice(1)}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              )}
+
               <div className="mt-6 space-x-4 flex">
                 {project.liveLink && (
                   <a
                     href={project.liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-700 hover:text-blue-600 transition-colors inline-flex items-center"
+                    className="text-gray-700 rounded border border-indigo-300 p-2 hover:border-indigo-500 text-blue-600 transition-colors inline-flex items-center"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -54,7 +98,7 @@ export default function Projects() {
                       <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
                       <path d="M2 12h20" />
                     </svg>
-                    Live Project
+                    Live Application
                   </a>
                 )}
                 {project.githubLink && (
@@ -62,7 +106,7 @@ export default function Projects() {
                     href={project.githubLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-700 hover:text-blue-600 transition-colors inline-flex items-center"
+                    className="text-gray-700 rounded border border-indigo-300 p-2 hover:border-indigo-500 text-blue-600 transition-colors inline-flex items-center"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -85,8 +129,7 @@ export default function Projects() {
             <div className="md:w-1/2 mt-6 md:mt-0 md:ml-6">
               {!imageErrors[project.id] ? (
                 <Image
-                  src="logo-images/react.svg"
-                  // src={project.imageUrl}
+                  src={project.imageUrl}
                   alt={project.name}
                   width={600}
                   height={256}
@@ -112,7 +155,7 @@ export default function Projects() {
                         />
                       </svg>
                     </div>
-                    <h4 className="text-base font-medium text-gray-700">
+                    <h4 className="text-base font-medium text-gray-700 font-work-sans">
                       {project.name}
                     </h4>
                   </div>

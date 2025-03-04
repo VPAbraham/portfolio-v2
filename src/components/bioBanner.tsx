@@ -10,8 +10,7 @@ export default function BioBanner() {
       <div className="flex flex-col md:flex-row gap-8 items-center">
         <div className="w-32 h-32 md:w-48 md:h-48 relative rounded-full overflow-hidden border-4 border-white shadow-lg">
           <Image
-            // src="/profile-photo.jpg"
-            src="logo-images/react.svg"
+            src="/portrait.jpg"
             alt="Victor Abraham"
             width={192}
             height={192}
@@ -52,7 +51,7 @@ export default function BioBanner() {
                   I specialize in building scalable frontend architectures and
                   bridging the gap between design and development. My background
                   in both startups and enterprise environments has given me the
-                  versatility to adapt to any team&apos;s needs.
+                  versatility to adapt to any team`s needs.
                 </p>
                 <p className="mb-3">
                   Currently seeking opportunities to work on challenging
@@ -89,7 +88,7 @@ export default function BioBanner() {
           <div className="flex flex-wrap gap-4 mt-6">
             <a
               href="/resume.pdf"
-              target="_blank"
+              download="resume.pdf"
               className="accent-button px-5 py-2 rounded-md font-medium transition-all flex items-center"
             >
               <svg

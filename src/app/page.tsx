@@ -16,18 +16,30 @@ export default function Home() {
       <div className="w-full">
         <main className="flex flex-col">
           <div className="lg:container mx-auto px-4 md:px-8">
-            <Hero />
-            <BioBanner />
+            <section>
+              <Hero />
+            </section>
 
-            <section className="w-full mb-16">
+            <section>
+              <BioBanner />
+            </section>
+
+            <section className="w-full mb-16 border-b">
               <h2 className="text-3xl font-bold text-gray-900 mb-8"></h2>
               <Skills />
             </section>
 
-            <Projects />
-            <Testimonials />
+            <section className="border-b mb-16">
+              <Projects />
+            </section>
 
-            <ContactMe />
+            <section className="mb-8">
+              <Testimonials />
+            </section>
+
+            <section>
+              <ContactMe />
+            </section>
           </div>
         </main>
       </div>
