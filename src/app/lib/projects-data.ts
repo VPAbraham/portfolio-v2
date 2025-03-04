@@ -8,9 +8,7 @@ export const projectsCollection: ProjectsCollection = {
       description:
         'A premium yoga streaming platform with HD video lessons, live classes, and personalized training plans.',
       imageUrl: '/projects/outer-reach.png',
-      liveLink: 'https://outerreach.com',
-      githubLink: 'https://github.com/victorabraham/outer-reach',
-      technologies: ['react', 'typescript', 'nodejs', 'express'],
+      technologies: ['react', 'typescript', 'nodejs', 'express', 'SASS'],
     },
     {
       id: 'cannahauler',

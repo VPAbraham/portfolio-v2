@@ -129,8 +129,7 @@ export default function Projects() {
             <div className="md:w-1/2 mt-6 md:mt-0 md:ml-6">
               {!imageErrors[project.id] ? (
                 <Image
-                  src="logo-images/react.svg"
-                  // src={project.imageUrl}
+                  src={project.imageUrl}
                   alt={project.name}
                   width={600}
                   height={256}
