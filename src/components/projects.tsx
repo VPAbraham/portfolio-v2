@@ -82,7 +82,7 @@ export default function Projects() {
                     href={project.liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-700 hover:text-blue-600 transition-colors inline-flex items-center"
+                    className="text-gray-700 rounded border border-indigo-300 p-2 hover:border-indigo-500 text-blue-600 transition-colors inline-flex items-center"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -98,7 +98,7 @@ export default function Projects() {
                       <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
                       <path d="M2 12h20" />
                     </svg>
-                    Live Project
+                    Live Application
                   </a>
                 )}
                 {project.githubLink && (
@@ -106,7 +106,7 @@ export default function Projects() {
                     href={project.githubLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-700 hover:text-blue-600 transition-colors inline-flex items-center"
+                    className="text-gray-700 rounded border border-indigo-300 p-2 hover:border-indigo-500 text-blue-600 transition-colors inline-flex items-center"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
